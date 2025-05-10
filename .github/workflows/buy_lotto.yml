@@ -16,6 +16,14 @@ jobs:
           python-version: '3.9'
           cache: 'pip' # caching pip dependencies
       - run: pip install -r requirements.txt
+
+      - name: Print Environment Variables
+        run: |
+          echo "Username: $USERNAME"
+          echo "Count: $COUNT"
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          COUNT: ${{ secrets.COUNT }}
       
       - name: Run Scripts
         run: make buy
