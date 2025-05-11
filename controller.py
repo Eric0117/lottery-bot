@@ -79,7 +79,7 @@ def buy():
     globalAuthCtrl = auth.AuthController()
     globalAuthCtrl.login(username, password)
 
-    # response = buy_lotto645(globalAuthCtrl, count, mode) 
+    response = buy_lotto645(globalAuthCtrl, count, mode) 
     
     time.sleep(10)
 
